@@ -4,7 +4,9 @@
   "description": "yummy web scraper - DB",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,11 +28,13 @@
     "fs": "0.0.1-security",
     "iterate-object": "^1.3.2",
     "mongoose": "^4.10.2",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-xml2json": "^0.1.5"
-  }
+  },
+  "snyk": true
 }
